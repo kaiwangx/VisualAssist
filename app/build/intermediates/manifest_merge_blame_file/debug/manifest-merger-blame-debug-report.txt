@@ -1,0 +1,71 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.vizassist"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:7:5-81
+11-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:7:22-78
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:8:5-67
+12-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:8:22-64
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:9:5-65
+13-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:9:22-62
+14
+15    <uses-feature android:name="android.hardware.camera" />
+15-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:10:5-60
+15-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:10:19-57
+16    <uses-feature android:name="android.hardware.camera.autofocus" />
+16-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:11:5-70
+16-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:11:19-67
+17    <uses-feature
+17-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:12:5-91
+18        android:name="android.hardware.camera.front"
+18-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:12:19-63
+19        android:required="false" />
+19-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:12:64-88
+20
+21    <application
+21-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:14:5-28:19
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.0.1] C:\Users\wangk\.gradle\caches\transforms-2\files-2.1\72b2b92ec4ab73ff21fb9bc348de3b22\core-1.0.1\AndroidManifest.xml:22:18-86
+23        android:debuggable="true"
+24        android:icon="@drawable/ic_launcher"
+24-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:15:9-45
+25        android:label="@string/app_name"
+25-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:17:9-41
+26        android:testOnly="true"
+27        android:usesCleartextTraffic="true" >
+27-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:16:9-44
+28        <activity
+28-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:18:9-27:20
+29            android:name="com.example.vizassist.MainActivity"
+29-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:19:13-41
+30            android:label="@string/app_name"
+30-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:20:13-45
+31            android:screenOrientation="portrait"
+31-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:21:13-49
+32            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+32-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:22:13-71
+33            <intent-filter>
+33-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:23:13-26:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:24:17-69
+34-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:24:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:25:17-77
+36-->C:\Users\wangk\AndroidStudioProjects\viz\VizAssist\app\src\main\AndroidManifest.xml:25:27-74
+37            </intent-filter>
+38        </activity>
+39    </application>
+40
+41</manifest>
