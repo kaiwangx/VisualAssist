@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\VizAssit\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1825438117.index
+\vizassist\src\main\resources
