@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.google.cloud.vision.v1p1beta1.TextAnnotation"/>
+<fullyQualifiedTypeName name="com.google.cloud.vision.v1.ImageAnnotatorSettings"/>
+<fullyQualifiedTypeName name="com.google.api.gax.core.FixedCredentialsProvider"/>
+<fullyQualifiedTypeName name="com.google.auth.oauth2.GoogleCredentials"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="com.google.api.client.util.Lists"/>
+<fullyQualifiedTypeName name="com.google.common.collect.Lists"/>
+<fullyQualifiedTypeName name="com.google.protobuf.ByteString"/>
+<fullyQualifiedTypeName name="com.google.cloud.vision.v1.Image"/>
+<fullyQualifiedTypeName name="annotate.CloudVisionClient.Status"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+</qualifiedTypeNameHistroy>
