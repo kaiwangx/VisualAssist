@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_capture :
-                mainActivityUIController.updateResultView(getString(R.string.result_placeholder));
                 if (ContextCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ) {
                     mainActivityUIController.askForPermission(
@@ -63,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.action_gallery :
-                mainActivityUIController.updateResultView(getString(R.string.result_placeholder));
                 ImageActions.startGalleryActivity(this, SELECT_IMAGE_CODE);
                 break;
             default:
@@ -119,7 +117,8 @@ public class MainActivity extends AppCompatActivity {
             HttpURLConnection conn = HttpUtilities.makeHttpPostConnectionToUploadImage(bitmap, UPLOAD_HTTP_URL);
             conn.connect();
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                mainActivityUIController.updateResultView(HttpUtilities.parseOCRResponse(conn));
+                String result = HttpUtilities.parseOCRResponse (conn);
+                mainActivityUIController .announceRecognitionResult(result);
             } else {
                 mainActivityUIController.showInternetError();
             }

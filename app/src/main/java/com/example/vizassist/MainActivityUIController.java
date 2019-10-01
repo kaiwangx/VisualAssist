@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,28 +24,28 @@ public class MainActivityUIController {
 
     private TextView resultView;
     private ImageView imageView;
+    private String lastResult ;
 
     public MainActivityUIController(Activity activity) {
         this.activity = activity;
         this.mainThreadHandler = new Handler(Looper.getMainLooper());
+        lastResult = activity.getString(R.string. result_placeholder );
     }
 
     public void resume() {
         resultView = activity.findViewById(R.id.resultView);
         imageView = activity.findViewById(R.id.capturedImage);
-    }
-
-    public void updateResultView(final String text) {
-        mainThreadHandler.post(new Runnable() {
+        resultView .setOnClickListener( new View.OnClickListener() {
             @Override
-            public void run() {
-                resultView.setText(text);
+            public void onClick(View view) {
+                announceRecognitionResult(lastResult);
             }
         });
     }
 
     public void updateImageViewWithBitmap(Bitmap bitmap) {
-        imageView.setImageBitmap(bitmap);
+        imageView .setImageBitmap(bitmap);
+        imageView .setContentDescription(activity .getString(R.string. image_sent));
     }
 
     public void showErrorDialogWithMessage(int messageStringID) {
@@ -79,5 +80,25 @@ public class MainActivityUIController {
                 ActivityCompat.requestPermissions(activity, new String[]{permission}, requestCode);
             }
         }
+    }
+
+    public void announceRecognitionResult(final String text) {
+        lastResult = text;
+        mainThreadHandler .post( new Runnable() {
+            @Override
+            public void run() {
+                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                builder.setTitle(R.string.recognition_dialog_title);
+                builder.setMessage( text );
+                builder.setPositiveButton(R.string. error_dialog_dismiss_button ,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                builder.show();
+            }
+        });
     }
 }

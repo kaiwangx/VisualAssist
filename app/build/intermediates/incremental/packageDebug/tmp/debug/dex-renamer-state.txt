@@ -1,4 +1,4 @@
-#Sat Aug 31 17:54:30 CDT 2019
+#Fri Sep 20 23:12:28 CDT 2019
 base.0=C\:\\Users\\wangk\\AndroidStudioProjects\\viz\\VizAssist\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

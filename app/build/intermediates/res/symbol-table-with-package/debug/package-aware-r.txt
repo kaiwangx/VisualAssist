@@ -887,9 +887,13 @@ string error_dialog_dismiss_button
 string error_dialog_title
 string gallery_button
 string hello_world
+string image_not_selected
+string image_sent
 string internet_error_message
 string permission_denied_message
 string reading_error_message
+string recognition_dialog_title
+string result_button_text
 string result_placeholder
 string search_menu_title
 string status_bar_notification_info_overflow
